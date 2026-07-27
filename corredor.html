@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Corredor - Falange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-btn">← Voltar</a>
+            <h1 id="tituloCorredor">Corredor</h1>
+        </header>
+
+        <button id="btnAdicionar" class="btn-primary">➕ Adicionar mercadoria</button>
+
+        <div id="formBox" class="form-box hidden">
+            <h3 id="formTitle">Nova mercadoria</h3>
+            <input type="text" id="inputNome" placeholder="Nome da mercadoria (ex: Néctar de uva 1L)" maxlength="80">
+            <input type="number" id="inputQtd" placeholder="Quantidade de paletes" min="1" value="1">
+            <div class="form-actions">
+                <button id="btnSalvar" class="btn-primary">Aceitar</button>
+                <button id="btnCancelar" class="btn-secondary">Cancelar</button>
+            </div>
+        </div>
+
+        <div id="listaMercadorias" class="lista-mercadorias"></div>
+        <p id="msgVazio" class="msg-vazio hidden">Nenhuma mercadoria cadastrada neste corredor.</p>
+    </div>
+
+    <script src="script.js?v=5"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initCorredorPage();
+        });
+    </script>
+</body>
+</html>
