@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Falange - Controle de Paletes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📦 FALANGE</h1>
+            <p class="subtitle">Controle de Paletes</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Número do corredor ou nome da mercadoria..." autocomplete="off">
+            <button id="searchBtn">Buscar</button>
+        </div>
+
+        <div id="searchResults" class="search-results hidden"></div>
+
+        <div id="corredoresSection">
+            <h2>Corredores</h2>
+            <div id="corredoresGrupos"></div>
+        </div>
+    </div>
+
+    <script src="script.js?v=5"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCorredores();
+            setupSearch();
+        });
+    </script>
+</body>
+</html>
